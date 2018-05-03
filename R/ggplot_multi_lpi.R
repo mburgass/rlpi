@@ -17,7 +17,7 @@ ggplot_multi_lpi <- function(lpis, names=NULL,
                              ylims=c(0, 2), xlims=NULL,
                              title="", col="Set2",
                              facet=FALSE, trans="identity",
-                             yrbreaks = 20,
+                             yrbreaks = 5,
                              lpi_breaks = 0.2) {
 
   # Bit of a hack to avoid NOTE during R CMD check
