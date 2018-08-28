@@ -50,7 +50,7 @@ ggplot_multi_lpi <- function(lpis, names=NULL,
     ggplot2::scale_y_continuous(trans=trans, breaks=seq(ylims[1], ylims[2], lpi_breaks)) +
     ggplot2::scale_x_continuous(breaks=seq(xlims[1], xlims[2], yrbreaks)) +
     ggplot2::theme(legend.position="right")+
-    ggplot2::guide_legend(title="Scenario")
+    ggplot2::theme(legend.title=element_text(size=16))+ scale_color_discrete(name="Scenario")
 
 
   if (facet) {
