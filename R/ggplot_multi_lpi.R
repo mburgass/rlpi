@@ -36,17 +36,17 @@ ggplot_multi_lpi <- function(lpis, names=NULL,
   }
 
   #print(dfs)
-  g = ggplot2::ggplot(dfs, ggplot2::aes(x=years, y=lpi, group=group))+
+  g = ggplot2::ggplot(dfs, ggplot2::aes(x=Year, y=LPI, group=Scenario))+
     ggplot2::geom_hline(yintercept=1) +
     ggplot2::geom_line(ggplot2::aes(color=group), size=1) +
     ggplot2::geom_ribbon(ggplot2::aes(ymin=lwr,ymax=upr, fill=group),alpha=0.5) +
     ggplot2::coord_cartesian(ylim=ylims, xlim=xlims) + ggplot2::theme_bw() +
     ggplot2::theme(text = ggplot2::element_text(size=16),
-                   axis.text.x = ggplot2::element_text(size=8, angle = 90, hjust = 1)) +
+                   axis.text.x = ggplot2::element_text(size=14, angle = 90, hjust = 1)) +
     ggplot2::ggtitle(title) +
     ggplot2::scale_fill_brewer(palette=col) +
     ggplot2::scale_color_brewer(palette=col) +
-    ggplot2::ylab("Index (1970 = 1)") +
+    ggplot2::ylab("Index (1981 = 1)") +
     ggplot2::scale_y_continuous(trans=trans, breaks=seq(ylims[1], ylims[2], lpi_breaks)) +
     ggplot2::scale_x_continuous(breaks=seq(xlims[1], xlims[2], yrbreaks)) +
     ggplot2::theme(legend.position="right")
