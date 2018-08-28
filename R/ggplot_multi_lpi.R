@@ -36,7 +36,7 @@ ggplot_multi_lpi <- function(lpis, names=NULL,
   }
 
   #print(dfs)
-  g = ggplot2::ggplot(dfs, ggplot2::aes(x=Year, y=LPI, group=Scenario))+
+  g = ggplot2::ggplot(dfs, ggplot2::aes(x=Year, y=LPI, group=group))+
     ggplot2::geom_hline(yintercept=1) +
     ggplot2::geom_line(ggplot2::aes(color=group), size=1) +
     ggplot2::geom_ribbon(ggplot2::aes(ymin=lwr,ymax=upr, fill=group),alpha=0.5) +
@@ -49,7 +49,8 @@ ggplot_multi_lpi <- function(lpis, names=NULL,
     ggplot2::ylab("Index (1981 = 1)") +
     ggplot2::scale_y_continuous(trans=trans, breaks=seq(ylims[1], ylims[2], lpi_breaks)) +
     ggplot2::scale_x_continuous(breaks=seq(xlims[1], xlims[2], yrbreaks)) +
-    ggplot2::theme(legend.position="right")
+    ggplot2::theme(legend.position="right")+
+    ggplot2::guide_legend(title="Scenario")
 
 
   if (facet) {
