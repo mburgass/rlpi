@@ -14,7 +14,7 @@
 #' @export
 #'
 ggplot_multi_lpi <- function(lpis, names=NULL,
-                             ylims=c(0.4, 1.4), xlims=NULL,
+                             ylims=c(0, 2), xlims=NULL,
                              title="", col="Set2",
                              facet=FALSE, trans="identity",
                              yrbreaks = 5,

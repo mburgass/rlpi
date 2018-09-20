@@ -31,7 +31,7 @@ ggplot_lpi <- function(d, col="darkblue", line_col="white", title="",
   g <- g + ggplot2::coord_cartesian(ylim=ylims, xlim=xlims) + ggplot2::theme_bw()
   g <- g + ggplot2::theme(text = ggplot2::element_text(size=16), axis.text.x = ggplot2::element_text(size=14, angle = 90, hjust = 1))
   g <- g + ggplot2::ggtitle(title)
-  g <- g + ggplot2::ylab("Index (1981 = 1)")
+  g <- g + ggplot2::ylab("Index (1980 = 1)")
   g <- g + ggplot2::scale_y_continuous(trans=trans, breaks = seq(ylims[1], ylims[2], lpi_breaks))
   g <- g + ggplot2::scale_x_continuous(breaks = seq(xlims[1], xlims[2], yrbreaks))
   print(g)
