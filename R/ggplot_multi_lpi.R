@@ -54,7 +54,7 @@ ggplot_multi_lpi <- function(lpis, names=NULL,
 
 
   if (facet) {
-    g <- g + ggplot2::facet_grid( ~ group)
+    g <- g + ggplot2::facet_grid(group~.)
   }
   print(g)
 }
