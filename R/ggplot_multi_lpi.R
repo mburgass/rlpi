@@ -46,7 +46,7 @@ ggplot_multi_lpi <- function(lpis, names=NULL,
     ggplot2::ggtitle(title) +
     ggplot2::scale_fill_brewer(palette=col) +
     ggplot2::scale_color_brewer(palette=col) +
-    ggplot2::ylab("Index (1981 = 1)") +
+    ggplot2::ylab("Index (2015 = 1)") +
     ggplot2::xlab("Years")+
     ggplot2::scale_y_continuous(trans=trans, breaks=seq(ylims[1], ylims[2], lpi_breaks)) +
     ggplot2::scale_x_continuous(breaks=seq(xlims[1], xlims[2], yrbreaks)) +
